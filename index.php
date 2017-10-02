@@ -11,7 +11,7 @@
 		$comments = CommentManager::getComments();
 		$users = UserManager::getUsers();
 
-	} catch(PDOExeption $e) {
+	} catch (PDOExeption $e) {
 		error_log($e);
 		http_response_code(500);
 		die("An error occurred");
@@ -69,4 +69,7 @@
 
 </div>
 </div>
+
+<script src="https://tracker/demo/tracker/tracker.js"></script>
+
 <?php require 'include/footer.php' ?>
