@@ -20,6 +20,7 @@
 				// Yes, the password is the username. This is intentionally insecure.
 				if (strtolower($username) == strtolower($password)) { 
 
+					session_regenerate_id();
 					$_SESSION['username'] = $username;
 
 					$destination = $_REQUEST['destination'];
