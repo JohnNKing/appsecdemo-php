@@ -70,6 +70,4 @@
 </div>
 </div>
 
-<script src="https://tracker/demo/tracker/tracker.js"></script>
-
 <?php require 'include/footer.php' ?>
