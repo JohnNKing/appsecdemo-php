@@ -6,6 +6,12 @@
         $stmt = $db->prepare('UPDATE hits set count = count + 1');
         $stmt->execute();
 
+        $stmt = $db->prepare('SELECT * from hits');
+        $stmt->execute();
+
+        $row = $stmt->fetch();
+        print $row['count'];
+
     } catch (PDOException $e) {
 		error_log($e);
 		http_response_code(500);

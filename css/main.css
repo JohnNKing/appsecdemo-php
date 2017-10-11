@@ -12,3 +12,7 @@ h4 {
     line-height: 21px;
     padding-right: 21px;
 }
+
+.hit-counter {
+    font-weight: bold;
+}

@@ -66,6 +66,7 @@
 		<li class="list-group-item"><?= htmlspecialchars($user->getName()) ?></li> 
 	<?php } ?>
 </ul>
+<span class="hit-counter label label-info"></span>
 
 </div>
 </div>
