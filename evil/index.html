@@ -10,12 +10,13 @@
         <script src="https://demo/js/jquery.min.js"></script>
         <script>
             $( document ).ready(function() {
-                $.ajaxSetup({
+                $.ajax({
+                    url: "https://tracker/clear.php",
+                    type: 'PUT',
                     xhrFields: {
                         withCredentials: true
                     }
                 });
-                $.post('https://tracker/clear.php');
             });
         </script>
     </body>

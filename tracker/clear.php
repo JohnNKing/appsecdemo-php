@@ -1,19 +1,32 @@
 <?php
     session_start();
 
+    $methods = array('PUT', 'OPTIONS');
+	if (! in_array($_SERVER['REQUEST_METHOD'], $methods)) {
+		http_response_code(405);
+		exit;
+	}
+
     // DEMO: CORS Vulnerability
-    $origin = $_SERVER['HTTP_ORIGIN'];
     // UNSAFE
-    header('Access-Control-Allow-Origin: ' . $origin);
+    header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
     header('Access-Control-Allow-Credentials: true');
+    header('Access-Control-Allow-Methods: PUT');
+    
     // SAFE
     /*
-	$whitelist = array('https://demo', 'https://demo2');
-	if (in_array($origin, $whitelist)) {
-        header('Access-Control-Allow-Origin: ' . $origin);
+    $whitelist = array('https://demo', 'https://demo2');
+	if (in_array($_SERVER['HTTP_ORIGIN'], $whitelist)) {
+        header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
         header('Access-Control-Allow-Credentials: true');
+        header('Access-Control-Allow-Methods: PUT');
+        header('Vary: Origin');
     }
     */
+
+    if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+        exit;
+    }
 
 	if ($_SESSION['username'] == null) {
 		http_response_code(403);

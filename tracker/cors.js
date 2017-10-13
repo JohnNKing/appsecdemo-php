@@ -3,13 +3,14 @@ $( document ).ready(function() {
         $('.hit-counter').text(data + ' hits');
     });
 
-    $.ajaxSetup({
-        xhrFields: {
-            withCredentials: true
-        }
-    });
     $('.hit-counter').on('click', function(){
-        $.post('https://tracker/clear.php', function(data) {
+        $.ajax({
+            url: "https://tracker/clear.php",
+            type: 'PUT',
+            xhrFields: {
+                withCredentials: true
+            }
+        }).success(function() {
             $('.hit-counter').text('0 hits');
         });
     });
