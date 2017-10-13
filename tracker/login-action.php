@@ -15,10 +15,9 @@
 	if (($username == 'John') && ($password == 'John')) {
 		session_regenerate_id();
 		$_SESSION['username'] = $username;
-		
-		header("Location: .");
-		exit;
-	}
+		print "Success";
 
-	header('Location: .?error');
+	} else {
+		header('Location: .?error');
+	}
 ?>
