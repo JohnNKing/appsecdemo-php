@@ -1,4 +1,6 @@
 <?php
+    header('Access-Control-Allow-Origin: *');
+
     $db = new PDO('sqlite:../data/db');
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
