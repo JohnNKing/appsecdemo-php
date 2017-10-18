@@ -12,7 +12,7 @@
 		<div>Authentication failed</div>
 	<?php } ?>
 
-	<form action="login-action.php" method="POST">
+	<form action="login.php" method="POST">
 		<input type="text" id="username" name="username" placeholder="Username"><br>
 		<input type="password" id="password" name="password" placeholder="Password"><br>
 		<button type="submit" class="btn btn-default">Sign In</button>
