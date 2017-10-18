@@ -14,15 +14,13 @@
     header('Access-Control-Allow-Methods: DELETE');
     
     // SAFE
-    /*
-    $whitelist = array('https://demo', 'https://demo2');
-	if (in_array($_SERVER['HTTP_ORIGIN'], $whitelist)) {
-        header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
-        header('Access-Control-Allow-Credentials: true');
-        header('Access-Control-Allow-Methods: DELETE');
-        header('Vary: Origin');
-    }
-    */
+    // $whitelist = array('https://demo', 'https://demo2');
+	// if (in_array($_SERVER['HTTP_ORIGIN'], $whitelist)) {
+    //     header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+    //     header('Access-Control-Allow-Credentials: true');
+    //     header('Access-Control-Allow-Methods: DELETE');
+    //     header('Vary: Origin');
+    // }
 
 
 

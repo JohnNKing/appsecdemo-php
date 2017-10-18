@@ -7,30 +7,26 @@
     // header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
 
     // ALSO NOT SUFFICIENT
-    /*
-    $whitelist = array('https://demo', 'https://demo2');
-	if (in_array($_SERVER['HTTP_ORIGIN'], $whitelist)) {
-        header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
-    }
-    */
+    // $whitelist = array('https://demo', 'https://demo2');
+	// if (in_array($_SERVER['HTTP_ORIGIN'], $whitelist)) {
+    //     header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+    // }
 
-    // SAFE    
-    /*
-    $whitelist = array('https://demo', 'https://demo2');
-	if (in_array($_SERVER['HTTP_ORIGIN'], $whitelist)) {
-        header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
-        header('Access-Control-Allow-Methods: PUT');
-        header('Vary: Origin');
-    }
-    
-    if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-        exit;
-
-    } else if ($_SERVER['REQUEST_METHOD'] != 'PUT') {
-        http_response_code(405);
-        exit;
-    }
-    */
+    // SAFE
+    // $whitelist = array('https://demo', 'https://demo2');
+	// if (in_array($_SERVER['HTTP_ORIGIN'], $whitelist)) {
+    //     header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+    //     header('Access-Control-Allow-Methods: PUT');
+    //     header('Vary: Origin');
+    // }
+    //
+    // if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    //     exit;
+    //
+    // } else if ($_SERVER['REQUEST_METHOD'] != 'PUT') {
+    //     http_response_code(405);
+    //     exit;
+    // }
 
 
 

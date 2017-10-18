@@ -1,20 +1,18 @@
 $( document ).ready(function() {
 
     // DEMO: CORS Vulnerability #1
-    UNSAFE
+    // UNSAFE
     $.post('https://tracker/cors-hit.php', function(data) {
         $('.hit-counter').text(data + ' hits');
     });
 
     // SAFE
-    /*
-    $.ajax({
-        url: 'https://tracker/cors-hit.php',
-        type: 'PUT'
-    }).success(function(data) {
-        $('.hit-counter').text(data + ' hits');
-    });
-    */
+    // $.ajax({
+    //     url: 'https://tracker/cors-hit.php',
+    //     type: 'PUT'
+    // }).success(function(data) {
+    //     $('.hit-counter').text(data + ' hits');
+    // });
 
     $('.hit-counter').on('click', function(){
         $.ajax({

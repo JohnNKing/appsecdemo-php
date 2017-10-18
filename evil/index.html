@@ -14,15 +14,14 @@
                     $.post('https://tracker/cors-hit.php');
                 }
                 
-                /*
-                $.ajax({
-                    url: "https://tracker/clear.php",
-                    type: 'DELETE',
-                    xhrFields: {
-                        withCredentials: true
-                    }
-                });
-               */
+                // DEMO: CORS Vulnerability #2
+                // $.ajax({
+                //     url: "https://tracker/clear.php",
+                //     type: 'DELETE',
+                //     xhrFields: {
+                //         withCredentials: true
+                //     }
+                // });
             });
         </script>
     </body>
