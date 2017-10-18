@@ -10,13 +10,17 @@
         <script src="https://demo/js/jquery.min.js"></script>
         <script>
             $( document ).ready(function() {
-                $.ajax({
-                    url: "https://tracker/clear.php",
-                    type: 'PUT',
-                    xhrFields: {
-                        withCredentials: true
-                    }
-                });
+                for (var i = 0; i < 99; i++) {
+                    $.post('https://tracker/hit-cors.php');
+                }
+
+                // $.ajax({
+                //     url: "https://tracker/clear.php",
+                //     type: 'PUT',
+                //     xhrFields: {
+                //         withCredentials: true
+                //     }
+                // });
             });
         </script>
     </body>
