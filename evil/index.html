@@ -11,16 +11,18 @@
         <script>
             $( document ).ready(function() {
                 for (var i = 0; i < 99; i++) {
-                    $.post('https://tracker/hit-cors.php');
+                    $.post('https://tracker/cors-hit.php');
                 }
-
-                // $.ajax({
-                //     url: "https://tracker/clear.php",
-                //     type: 'PUT',
-                //     xhrFields: {
-                //         withCredentials: true
-                //     }
-                // });
+                
+                /*
+                $.ajax({
+                    url: "https://tracker/clear.php",
+                    type: 'DELETE',
+                    xhrFields: {
+                        withCredentials: true
+                    }
+                });
+               */
             });
         </script>
     </body>
