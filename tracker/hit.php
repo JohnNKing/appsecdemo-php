@@ -17,11 +17,18 @@
         $stmt->execute();
 
         $row = $stmt->fetch();
-        print $row['count'];
 
+        header('Content-Type: image/svg+xml');
+?>
+<svg width="60" height="20" xmlns="http://www.w3.org/2000/svg">
+   <g>
+        <text x="5" y="15" fill="#000000"><?= $row['count'] ?> hits</text>
+   </g>
+ </svg>
+<?php
     } catch (PDOException $e) {
-		error_log($e);
-		http_response_code(500);
-		die("An error occurred");
+		    error_log($e);
+		    http_response_code(500);
+		    die("An error occurred");
     }
 ?>
