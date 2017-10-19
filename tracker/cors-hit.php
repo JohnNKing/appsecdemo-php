@@ -1,7 +1,7 @@
 <?php
     // DEMO: CORS Vulnerability #1
     // UNSAFE
-    header('Access-Control-Allow-Origin: *');
+    // header('Access-Control-Allow-Origin: *');
 
     // ALSO UNSAFE
     // header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
