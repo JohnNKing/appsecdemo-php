@@ -33,11 +33,11 @@
 	?>
 		<li class="list-group-item<?= $extraClass ?>">
 
-			<? // A3 Cross-Site Scripting (XSS) ?>
-			<? // UNSAFE ?>
+			<?php // A3 Cross-Site Scripting (XSS) ?>
+			<?php // UNSAFE ?>
 			<?= $comment->getComment() ?>
-			<? // SAFE ?>
-			<?//= htmlspecialchars($comment->getComment()) ?>
+			<?php // SAFE ?>
+			<?php //= htmlspecialchars($comment->getComment()) ?>
 
 			<?php if ($_SESSION['username'] != '') { ?>
 				<a href="remove-comment-action.php?id=<?= htmlspecialchars($comment->getId()) ?>" class="close">&times</a>

@@ -10,11 +10,11 @@
 	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
 	<span class="sr-only">Error:</span> 
 
-	<? // A3 Cross-Site Scripting (XSS) ?>
-	<? // UNSAFE ?>
+	<?php // A3 Cross-Site Scripting (XSS) ?>
+	<?php // UNSAFE ?>
 	<?= $error ?>
-	<? // SAFE ?>
-	<? //= htmlspecialchars($error) ?>
+	<?php // SAFE ?>
+	<?php //= htmlspecialchars($error) ?>
 
 </div>
 
